@@ -42,11 +42,6 @@ O projeto é composto pelos seguintes arquivos principais:
 ## Contribuições
 
 Contribuições são bem-vindas! Se você tiver alguma ideia ou encontrar um problema, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais detalhes.
-
 ## Contato
 
 Para mais informações ou dúvidas, entre em contato com:
