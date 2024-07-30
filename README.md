@@ -4,6 +4,7 @@ site_divulgacao
 Aqui está um exemplo de README para o seu projeto `site_divulgacao` no GitHub:
 
 
+
 # Site de Divulgação
 
 Este é o repositório do projeto **Site de Divulgação**, um site simples para promover um serviço ou produto. O site é construído utilizando HTML, CSS e JavaScript.
