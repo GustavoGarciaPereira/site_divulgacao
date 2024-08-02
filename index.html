@@ -308,32 +308,41 @@
 
       deleteAllCookies();
       document.addEventListener('DOMContentLoaded', function() {
-          const videos = document.querySelectorAll('.video-to-maximize');
-
-          videos.forEach(video => {
-              video.addEventListener('play', function() {
-                  if (video.requestFullscreen) {
-                      video.requestFullscreen();
-                  } else if (video.mozRequestFullScreen) {
-                      video.mozRequestFullScreen();
-                  } else if (video.webkitRequestFullscreen) {
-                      video.webkitRequestFullscreen();
-                  } else if (video.msRequestFullscreen) {
-                      video.msRequestFullscreen();
-                  }
-
-                  video.muted = true;
-              });
-
-              video.addEventListener('fullscreenchange', function() {
-                  if (!document.fullscreenElement) {
-                      video.classList.remove('fullscreen');
-                  } else {
-                      video.classList.add('fullscreen');
-                  }
-              });
-          });
-      });
+        const videos = document.querySelectorAll('.video-to-maximize');
+    
+        videos.forEach(video => {
+            video.addEventListener('play', function() {
+                // Play all videos
+                videos.forEach(v => {
+                    if (v !== video) { // Check if the video is not the one that triggered the event
+                        v.play();
+                    }
+                });
+    
+                // Request fullscreen for the video that triggered the event
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                }
+    
+                video.muted = true;
+            });
+    
+            video.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) {
+                    video.classList.remove('fullscreen');
+                } else {
+                    video.classList.add('fullscreen');
+                }
+            });
+        });
+    });
+    
   </script>
 </body>
 
