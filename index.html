@@ -306,13 +306,23 @@
           }
       }
 
-      deleteAllCookies();
+      deleteAllCookies();    
       document.addEventListener('DOMContentLoaded', function() {
         const videos = document.querySelectorAll('.video-to-maximize');
     
+        // Play the first video automatically when the page loads
+        if (videos.length > 0) {
+            const firstVideo = videos[0];
+            firstVideo.muted = true; // Mute the video to allow autoplay
+            firstVideo.play().catch(error => {
+                console.log('Autoplay blocked:', error);
+                // Handle autoplay blockage here, e.g., prompt user interaction
+            });
+        }
+    
         videos.forEach(video => {
             video.addEventListener('play', function() {
-                // Play all videos
+                // Play all videos except the one that triggered the event
                 videos.forEach(v => {
                     if (v !== video) { // Check if the video is not the one that triggered the event
                         v.play();
@@ -340,8 +350,17 @@
                     video.classList.add('fullscreen');
                 }
             });
-        });
+    
+            video.addEventListener('ended', function() {
+                // Restart all videos when any video ends
+                videos.forEach(v => {
+                    v.currentTime = 0;
+                    v.play();
+                });
+            });
+        })
     });
+    
     
   </script>
 </body>
