@@ -236,6 +236,7 @@
                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="tel:55999932824">55999932824</a></button>
                         
                       </div>
+                      
 
                     </div>
                   </div>
@@ -295,64 +296,55 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script>
-      function deleteAllCookies() {
-          var cookies = document.cookie.split(";");
-          for (var i = 0; i < cookies.length; i++) {
-              var cookie = cookies[i];
-              var eqPos = cookie.indexOf("=");
-              var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-          }
-      }
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('.video-to-maximize');
 
-      deleteAllCookies();    
-      document.addEventListener('DOMContentLoaded', function() {
-        const videos = document.querySelectorAll('.video-to-maximize');
-        
-        videos.forEach(video => {
-            video.addEventListener('play', function() {
-                // Play all videos except the one that triggered the event
-                videos.forEach(v => {
-                    if (v !== video) { // Check if the video is not the one that triggered the event
-                        v.play();
-                    }
-                });
-    
-                // Request fullscreen for the video that triggered the event
-                if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.mozRequestFullScreen) {
-                    video.mozRequestFullScreen();
-                } else if (video.webkitRequestFullscreen) {
-                    video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) {
-                    video.msRequestFullscreen();
-                }
-    
-                video.muted = true;
-            });
-    
-            video.addEventListener('fullscreenchange', function() {
-                if (!document.fullscreenElement) {
-                    video.classList.remove('fullscreen');
-                } else {
-                    video.classList.add('fullscreen');
-                }
-            });
-    
-            video.addEventListener('ended', function() {
-                // Restart all videos when any video ends
-                videos.forEach(v => {
+    videos.forEach((video, index) => {
+        video.addEventListener('play', function() {
+            // Pausa todos os outros vídeos e os redefine
+            videos.forEach(v => {
+                if (v !== video) {
+                    v.pause();
                     v.currentTime = 0;
-                    v.play();
-                });
+                }
             });
-        })
+
+            // Solicita tela cheia para o vídeo atual
+            if (!document.fullscreenElement) {
+                requestFullScreen(video);
+            }
+
+            video.muted = true;
+        });
+
+        video.addEventListener('ended', function() {
+            // Passa para o próximo vídeo ou volta ao primeiro
+            const nextIndex = (index + 1) % videos.length;
+            const nextVideo = videos[nextIndex];
+
+            // Inicia o próximo vídeo e solicita tela cheia novamente
+            nextVideo.currentTime = 0;
+            nextVideo.play();
+            requestFullScreen(nextVideo); // Solicita tela cheia para o próximo vídeo
+        });
     });
-    
-    
-  </script>
+
+    // Função para solicitar tela cheia
+    function requestFullScreen(video) {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+        }
+    }
+});
+
+</script>
 </body>
 
 </html>
