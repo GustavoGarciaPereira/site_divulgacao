@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarabr Cocho SERVEBEM</title>
+    <meta name="description" content="Produtos de alta qualidade para seu gado. Conheça nossa linha completa de cochos e entre em contato.">
+    <meta name="keywords" content="cocho, SERVEBEM, pecuária, gado, alimentação animal">
+    <meta name="author" content="Gustavo Garcia Pereira">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-sm">
+        <nav class="container navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    <i class="fas fa-cow me-2"></i>
+                    Emarabr Cocho SERVEBEM
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#produtos"><i class="fas fa-box me-1"></i> Produtos</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#contato"><i class="fas fa-phone me-1"></i> Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video Carousel -->
+    <section class="hero-section py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="carousel slide" id="productCarousel" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3 overflow-hidden shadow-lg">
+                            <div class="carousel-item active">
+                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
+                                    <source src="img/video_1.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
+                                    <source src="img/video_2.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
+                                    <source src="img/video_3.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section id="produtos" class="products-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary">Nossos Produtos</h2>
+                <p class="lead text-muted">Conheça nossa linha completa de cochos de alta qualidade</p>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="productGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary">Entre em Contato</h2>
+                <p class="lead text-muted">Pronto para melhorar sua pecuária? Entre em contato conosco.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="d-grid gap-3">
+                            <!-- <a href="tel:+55999932824" class="btn btn-primary btn-lg">
+                                <i class="fas fa-phone-alt me-2"></i> (99) 99932-824
+                            </a>
+                            <a href="mailto:contato@emarabr.com.br" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-envelope me-2"></i> contato@emarabr.com.br
+                            </a> -->
+                            <a href="https://wa.me/+55999932824" target="_blank" class="btn btn-success btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2023 Emarabr Cocho SERVEBEM. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

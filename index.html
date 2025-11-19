@@ -3,32 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emarabr Cocho SERVEBEM</title>
-    <meta name="description" content="Produtos de alta qualidade para seu gado. Conheça nossa linha completa de cochos e entre em contato.">
-    <meta name="keywords" content="cocho, SERVEBEM, pecuária, gado, alimentação animal">
+    <title>Emarabr Cocho SERVEBEM | Soluções para Pecuária</title>
+    <meta name="description" content="Cochos de alta durabilidade e eficiência para o seu gado. Aumente a produtividade da sua fazenda com a linha SERVEBEM.">
+    <meta name="keywords" content="cocho, SERVEBEM, pecuária, gado, alimentação animal, cocho para sal, cocho para ração">
     <meta name="author" content="Gustavo Garcia Pereira">
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <!-- Google Fonts (Inter e Montserrat para visual moderno) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Verde Agro */
+            --primary-dark: #1B5E20;
+            --accent-color: #FFD700; /* Dourado para destaques */
+            --text-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Navbar Personalizada */
+        .navbar {
+            background-color: var(--primary-dark) !important;
+        }
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hero Section Aprimorada */
+        .hero-section {
+            position: relative;
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .carousel-item {
+            height: 80vh; /* Altura maior para impacto visual */
+            min-height: 500px;
+            background-color: #000;
+        }
+
+        .carousel-item video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6; /* Escurece o vídeo para destacar o texto */
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-agro {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-agro:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Seção de Benefícios */
+        .feature-icon {
+            background-color: rgba(46, 125, 50, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        /* Produtos */
+        .card-product {
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+            height: 100%;
+        }
+        .card-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder caso a imagem falhe */
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .carousel-item { height: 60vh; }
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header -->
-    <header class="bg-dark text-white shadow-sm">
-        <nav class="container navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold fs-4" href="#">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
                     <i class="fas fa-cow me-2"></i>
-                    Emarabr Cocho SERVEBEM
+                    Emarabr <span class="text-warning">SERVEBEM</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -36,13 +180,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-2">
-                            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Início</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="#produtos"><i class="fas fa-box me-1"></i> Produtos</a>
+                            <a class="nav-link" href="#diferenciais">Diferenciais</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="#contato"><i class="fas fa-phone me-1"></i> Contato</a>
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#depoimentos">Clientes</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="btn btn-outline-light btn-sm mt-1 px-3" href="#contato">Fale Conosco</a>
                         </li>
                     </ul>
                 </div>
@@ -51,40 +201,82 @@
     </header>
 
     <!-- Hero Section with Video Carousel -->
-    <section class="hero-section py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="carousel slide" id="productCarousel" data-bs-ride="carousel">
-                        <div class="carousel-inner rounded-3 overflow-hidden shadow-lg">
-                            <div class="carousel-item active">
-                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
-                                    <source src="img/video_1.mp4" type="video/mp4">
-                                    Seu navegador não suporta vídeos.
-                                </video>
-                            </div>
-                            <div class="carousel-item">
-                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
-                                    <source src="img/video_2.mp4" type="video/mp4">
-                                    Seu navegador não suporta vídeos.
-                                </video>
-                            </div>
-                            <div class="carousel-item">
-                                <video class="d-block w-100" autoplay loop muted playsinline style="height: 400px;">
-                                    <source src="img/video_3.mp4" type="video/mp4">
-                                    Seu navegador não suporta vídeos.
-                                </video>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Próximo</span>
-                        </button>
+    <section class="hero-section">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <video autoplay loop muted playsinline poster="img/1.jpeg">
+                        <source src="img/video_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-content">
+                        <h1>A Melhor Solução em Cochos para seu Rebanho</h1>
+                        <p class="lead mb-4">Durabilidade, praticidade e a qualidade que o produtor rural necessita.</p>
+                        <a href="https://wa.me/+5599932824" target="_blank" class="btn btn-agro btn-lg shadow">
+                            <i class="fab fa-whatsapp me-2"></i> Solicitar Orçamento
+                        </a>
                     </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <video autoplay loop muted playsinline poster="img/2.jpeg">
+                        <source src="img/video_2.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-content">
+                        <h1>Linha SERVEBEM</h1>
+                        <p class="lead mb-4">Tecnologia a favor da nutrição animal. Evite desperdícios.</p>
+                        <a href="#produtos" class="btn btn-agro btn-lg shadow">Ver Produtos</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <video autoplay loop muted playsinline poster="img/3.jpeg">
+                        <source src="img/video_3.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-content">
+                        <h1>Pronta Entrega e Qualidade</h1>
+                        <p class="lead mb-4">Leve a eficiência para dentro da sua fazenda hoje mesmo.</p>
+                        <a href="#contato" class="btn btn-agro btn-lg shadow">Falar com Vendedor</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Diferenciais (Nova Seção) -->
+    <section id="diferenciais" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Por que escolher o "Cocho SERVEBEM" da Embraer ?</h2>
+                <div class="div-separator mx-auto" style="width: 60px; height: 4px; background: var(--primary-color);"></div>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="feature-icon shadow-sm">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Alta Durabilidade</h4>
+                    <p class="text-muted">Material resistente ao Sol, a chuva e ao estresse operacional.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-icon shadow-sm">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h4>Custo-Benefício</h4>
+                    <p class="text-muted">Investimento inteligente que reduz mão de obra, a perda de ração e melhora a eficiência alimentar do rebanho.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-icon shadow-sm">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Logística Eficiente</h4>
+                    <p class="text-muted">Facilidade no transporte e instalação em qualquer lugar da sua propriedade.</p>
                 </div>
             </div>
         </div>
@@ -94,38 +286,114 @@
     <section id="produtos" class="products-section py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-primary">Nossos Produtos</h2>
-                <p class="lead text-muted">Conheça nossa linha completa de cochos de alta qualidade</p>
+                <h2 class="fw-bold text-dark">Nossos Produtos</h2>
+                <p class="text-muted">Conheça a linha completa SERVEBEM</p>
             </div>
             
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="productGrid">
-                <!-- Products will be dynamically loaded here -->
+            <!-- Grid Estático de Exemplo (Pode ser substituído pelo dinâmico JS se necessário) -->
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="productGrid">
+                
+                <!-- Produto 1 -->
+                <div class="col">
+                    <div class="card card-product border-0 shadow-sm">
+                        <!-- Coloque aqui uma imagem real do seu produto -->
+                        <img src="img/produto1.jpeg" class="card-img-top" alt="Cocho Padrão" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+SERVEBEM'">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Cocho Padrão 2m</h5>
+                            <p class="card-text text-muted small">Ideal para suplementação mineral e proteica.</p>
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Padrão" target="_blank" class="btn btn-outline-success w-100">
+                                <i class="fab fa-whatsapp me-1"></i> Cotar Preço
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="col">
+                    <div class="card card-product border-0 shadow-sm">
+                        <img src="img/produto2.jpeg" class="card-img-top" alt="Cocho Móvel" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+Móvel'">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Cocho Móvel</h5>
+                            <p class="card-text text-muted small">Versatilidade para rotação de pastagens.</p>
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Móvel" target="_blank" class="btn btn-outline-success w-100">
+                                <i class="fab fa-whatsapp me-1"></i> Cotar Preço
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="col">
+                    <div class="card card-product border-0 shadow-sm">
+                        <img src="img/produto3.jpeg" class="card-img-top" alt="Bebedouro" onerror="this.src='https://via.placeholder.com/400x300?text=Bebedouro'">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Bebedouro Australiano</h5>
+                            <p class="card-text text-muted small">Alta capacidade e resistência.</p>
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Bebedouro" target="_blank" class="btn btn-outline-success w-100">
+                                <i class="fab fa-whatsapp me-1"></i> Cotar Preço
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos / Prova Social -->
+    <section id="depoimentos" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-4">Quem usa, recomenda</h2>
+                    <div class="card border-0 shadow bg-white p-4">
+                        <i class="fas fa-quote-left text-success fs-1 mb-3"></i>
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p>"Os cochos da SERVEBEM mudaram o manejo na minha propriedade. Muito resistentes e o gado se adaptou rápido. O atendimento pelo WhatsApp foi excelente."</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mt-2">
+                                João Silva, <cite title="Source Title">Fazenda Santa Fé</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="contact-section py-5 bg-white">
+    <section id="contato" class="contact-section py-5 bg-dark text-white">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-primary">Entre em Contato</h2>
-                <p class="lead text-muted">Pronto para melhorar sua pecuária? Entre em contato conosco.</p>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card border-0 shadow-sm p-4">
-                        <div class="d-grid gap-3">
-                            <!-- <a href="tel:+55999932824" class="btn btn-primary btn-lg">
-                                <i class="fas fa-phone-alt me-2"></i> (99) 99932-824
-                            </a>
-                            <a href="mailto:contato@emarabr.com.br" class="btn btn-outline-primary btn-lg">
-                                <i class="fas fa-envelope me-2"></i> contato@emarabr.com.br
-                            </a> -->
-                            <a href="https://wa.me/+55999932824" target="_blank" class="btn btn-success btn-lg">
-                                <i class="fab fa-whatsapp me-2"></i> WhatsApp
-                            </a>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="display-6 fw-bold mb-3">Vamos negociar?</h2>
+                    <p class="lead text-light opacity-75 mb-4">Estamos prontos para atender sua demanda, seja para pequenos produtores ou grandes fazendas.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-success rounded-circle p-2 me-3"><i class="fas fa-phone-alt fa-lg"></i></div>
+                        <div>
+                            <h6 class="mb-0">Telefone</h6>
+                            <span>(99) 99932-824</span>
                         </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-success rounded-circle p-2 me-3"><i class="fas fa-envelope fa-lg"></i></div>
+                        <div>
+                            <h6 class="mb-0">Email</h6>
+                            <span>contato@emarabr.com.br</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 text-center">
+                    <div class="card bg-white text-dark p-4 rounded-4 shadow-lg">
+                        <h4 class="mb-3 fw-bold">Fale direto no WhatsApp</h4>
+                        <p class="small text-muted mb-4">Atendimento rápido e personalizado.</p>
+                        <a href="https://wa.me/+5599932824" target="_blank" class="btn btn-success btn-lg py-3 fw-bold pulse-button">
+                            <i class="fab fa-whatsapp me-2"></i> INICIAR CONVERSA AGORA
+                        </a>
                     </div>
                 </div>
             </div>
@@ -133,23 +401,30 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-black text-white py-4 border-top border-secondary">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p>&copy; 2023 Emarabr Cocho SERVEBEM. Todos os direitos reservados.</p>
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h5 class="fw-bold text-success mb-1">Emarabr Cocho SERVEBEM</h5>
+                    <p class="small text-muted mb-0">&copy; 2023 Todos os direitos reservados.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                <div class="col-md-6 text-center text-md-end social-links">
+                    <a href="#" class="text-white me-3 text-decoration-none"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white text-decoration-none"><i class="fab fa-youtube fa-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+5599932824" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- JS opcional para carregar produtos dinamicamente se ainda for usar -->
+    <script src="js2/main.js"></script>
 </body>
 </html>
