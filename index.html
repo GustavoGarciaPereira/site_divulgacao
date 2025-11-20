@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emarabr Cocho SERVEBEM | Soluções para Pecuária</title>
-    <meta name="description" content="Cochos de alta durabilidade e eficiência para o seu gado. Aumente a produtividade da sua fazenda com a linha SERVEBEM.">
-    <meta name="keywords" content="cocho, SERVEBEM, pecuária, gado, alimentação animal, cocho para sal, cocho para ração">
-    <meta name="author" content="Gustavo Garcia Pereira">
+    
+    <!-- SEO: Título Otimizado para Palavra-chave e Marca -->
+    <title>Cocho para Gado SERVEBEM - Emarabr | Alta Durabilidade e Economia</title>
+    
+    <!-- SEO: Meta Descrição com foco em dor/solução e CTA (Conversão) -->
+    <meta name="description" content="Procurando cocho para gado resistente? A linha SERVEBEM da Emarabr evita desperdício de ração e aumenta o lucro da sua fazenda. Entrega rápida. Faça um orçamento agora!">
+    
+    <!-- SEO: Palavras-chave (Keywords) -->
+    <meta name="keywords" content="cocho para gado, cocho de sal, cocho servebem, emarabr, pecuária, cocho móvel, bebedouro australiano, nutrição animal, cocho resistente">
+    <meta name="author" content="Gustavo Garcia Pereira - Emarabr">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Tag Canônica (Evita conteúdo duplicado) -->
+    <link rel="canonical" href="https://www.emarabr.com.br/" /> <!-- Substitua pela URL final do seu site -->
+
+    <!-- Open Graph / Facebook / WhatsApp (Essencial para compartilhamento) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.emarabr.com.br/">
+    <meta property="og:title" content="Cocho SERVEBEM - A Melhor Solução para sua Pecuária">
+    <meta property="og:description" content="Durabilidade e economia para seu rebanho. Conheça nossos cochos e bebedouros. Clique e veja!">
+    <meta property="og:image" content="img/produto1.jpeg"> <!-- O ideal é que esta imagem seja 1200x630px -->
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cocho SERVEBEM - Emarabr">
+    <meta name="twitter:description" content="Soluções em cochos de alta durabilidade para gado.">
+    <meta name="twitter:image" content="img/produto1.jpeg">
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,12 +38,33 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts (Inter e Montserrat para visual moderno) -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <!-- Schema.org (Dados Estruturados para Google Meu Negócio e Produtos) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Emarabr Cocho SERVEBEM",
+      "image": "img/produto1.jpeg",
+      "description": "Fabricação e venda de cochos de alta durabilidade para pecuária. Linha SERVEBEM.",
+      "telephone": "+559999932824",
+      "email": "contato@emarabr.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "url": "https://www.emarabr.com.br/",
+      "priceRange": "$$"
+    }
+    </script>
 
     <style>
         :root {
@@ -54,7 +99,7 @@
         }
 
         .carousel-item {
-            height: 80vh; /* Altura maior para impacto visual */
+            height: 80vh; 
             min-height: 500px;
             background-color: #000;
         }
@@ -63,7 +108,7 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            opacity: 0.6; /* Escurece o vídeo para destacar o texto */
+            opacity: 0.6; 
         }
 
         .hero-content {
@@ -128,7 +173,7 @@
         .card-img-top {
             height: 250px;
             object-fit: cover;
-            background-color: #ddd; /* Placeholder caso a imagem falhe */
+            background-color: #ddd; 
         }
 
         /* Botão Flutuante WhatsApp */
@@ -178,7 +223,7 @@
                     <i class="fas fa-cow me-2"></i>
                     Emarabr <span class="text-warning">SERVEBEM</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -216,7 +261,7 @@
                     <div class="hero-content">
                         <h1>A Melhor Solução em Cochos para seu Rebanho</h1>
                         <p class="lead mb-4">Durabilidade, praticidade e a qualidade que o produtor rural necessita.</p>
-                        <a href="https://wa.me/+5599932824" target="_blank" class="btn btn-agro btn-lg shadow">
+                        <a href="https://wa.me/+5599932824" target="_blank" rel="noopener noreferrer" class="btn btn-agro btn-lg shadow">
                             <i class="fab fa-whatsapp me-2"></i> Solicitar Orçamento
                         </a>
                     </div>
@@ -246,9 +291,11 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
             </button>
         </div>
     </section>
@@ -257,7 +304,7 @@
     <section id="diferenciais" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark">Por que escolher o "Cocho SERVEBEM" da Emarabr ?</h2>
+                <h2 class="fw-bold text-dark">Por que escolher o "Cocho SERVEBEM" da Emarabr?</h2>
                 <div class="div-separator mx-auto" style="width: 60px; height: 4px; background: var(--primary-color);"></div>
             </div>
             <div class="row text-center g-4">
@@ -265,21 +312,21 @@
                     <div class="feature-icon shadow-sm">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4>Alta Durabilidade</h4>
+                    <h3>Alta Durabilidade</h3>
                     <p class="text-muted">Material resistente ao Sol, a chuva e ao estresse operacional.</p>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-icon shadow-sm">
                         <i class="fas fa-hand-holding-usd"></i>
                     </div>
-                    <h4>Custo-Benefício</h4>
+                    <h3>Custo-Benefício</h3>
                     <p class="text-muted">Investimento inteligente que reduz mão de obra, a perda de ração e melhora a eficiência alimentar do rebanho.</p>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-icon shadow-sm">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h4>Logística Eficiente</h4>
+                    <h3>Logística Eficiente</h3>
                     <p class="text-muted">Facilidade no transporte e instalação em qualquer lugar da sua propriedade.</p>
                 </div>
             </div>
@@ -291,21 +338,19 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold text-dark">Nossos Produtos</h2>
-                <p class="text-muted">Conheça a linha completa SERVEBEM</p>
+                <p class="text-muted">Conheça a linha completa de cochos para gado SERVEBEM</p>
             </div>
             
-            <!-- Grid Estático de Exemplo (Pode ser substituído pelo dinâmico JS se necessário) -->
             <div class="row row-cols-1 row-cols-md-3 g-4" id="productGrid">
                 
                 <!-- Produto 1 -->
                 <div class="col">
                     <div class="card card-product border-0 shadow-sm">
-                        <!-- Coloque aqui uma imagem real do seu produto -->
-                        <img src="img/produto1.jpeg" class="card-img-top" alt="Cocho Padrão" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+SERVEBEM'">
+                        <img src="img/produto1.jpeg" class="card-img-top" alt="Cocho Padrão 2m para Gado e Suplementação" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+SERVEBEM'">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">Cocho Padrão 2m</h5>
+                            <h3 class="h5 card-title fw-bold">Cocho Padrão 2m</h3>
                             <p class="card-text text-muted small">Ideal para suplementação mineral e proteica.</p>
-                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Padrão" target="_blank" class="btn btn-outline-success w-100">
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Padrão de 2 metros" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success w-100">
                                 <i class="fab fa-whatsapp me-1"></i> Cotar Preço
                             </a>
                         </div>
@@ -315,11 +360,11 @@
                 <!-- Produto 2 -->
                 <div class="col">
                     <div class="card card-product border-0 shadow-sm">
-                        <img src="img/produto2.jpeg" class="card-img-top" alt="Cocho Móvel" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+Móvel'">
+                        <img src="img/produto2.jpeg" class="card-img-top" alt="Cocho Móvel para Rotação de Pastagem" onerror="this.src='https://via.placeholder.com/400x300?text=Cocho+Móvel'">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">Cocho Móvel</h5>
+                            <h3 class="h5 card-title fw-bold">Cocho Móvel</h3>
                             <p class="card-text text-muted small">Versatilidade para rotação de pastagens.</p>
-                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Móvel" target="_blank" class="btn btn-outline-success w-100">
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Cocho Móvel" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success w-100">
                                 <i class="fab fa-whatsapp me-1"></i> Cotar Preço
                             </a>
                         </div>
@@ -329,11 +374,11 @@
                 <!-- Produto 3 -->
                 <div class="col">
                     <div class="card card-product border-0 shadow-sm">
-                        <img src="img/produto3.jpeg" class="card-img-top" alt="Bebedouro" onerror="this.src='https://via.placeholder.com/400x300?text=Bebedouro'">
+                        <img src="img/produto3.jpeg" class="card-img-top" alt="Bebedouro Australiano para Gado Resistente" onerror="this.src='https://via.placeholder.com/400x300?text=Bebedouro'">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">Bebedouro Australiano</h5>
+                            <h3 class="h5 card-title fw-bold">Bebedouro Australiano</h3>
                             <p class="card-text text-muted small">Alta capacidade e resistência.</p>
-                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Bebedouro" target="_blank" class="btn btn-outline-success w-100">
+                            <a href="https://wa.me/+5599932824?text=Olá, gostaria de saber mais sobre o Bebedouro Australiano" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success w-100">
                                 <i class="fab fa-whatsapp me-1"></i> Cotar Preço
                             </a>
                         </div>
@@ -377,7 +422,7 @@
                     <div class="d-flex align-items-center mb-3">
                         <div class="bg-success rounded-circle p-2 me-3"><i class="fas fa-phone-alt fa-lg"></i></div>
                         <div>
-                            <h6 class="mb-0">Telefone</h6>
+                            <h6 class="mb-0">Telefone / WhatsApp</h6>
                             <span>(99) 99932-824</span>
                         </div>
                     </div>
@@ -395,7 +440,7 @@
                     <div class="card bg-white text-dark p-4 rounded-4 shadow-lg">
                         <h4 class="mb-3 fw-bold">Fale direto no WhatsApp</h4>
                         <p class="small text-muted mb-4">Atendimento rápido e personalizado.</p>
-                        <a href="https://wa.me/+5599932824" target="_blank" class="btn btn-success btn-lg py-3 fw-bold pulse-button">
+                        <a href="https://wa.me/+5599932824" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg py-3 fw-bold pulse-button">
                             <i class="fab fa-whatsapp me-2"></i> INICIAR CONVERSA AGORA
                         </a>
                     </div>
@@ -413,22 +458,21 @@
                     <p class="small text-muted direitros mb-0">&copy; 2025 Todos os direitos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end social-links">
-                    <a href="#" class="text-white me-3 text-decoration-none"><i class="fab fa-facebook-f fa-lg"></i></a>
-                    <a href="#" class="text-white me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-white text-decoration-none"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="text-white me-3 text-decoration-none" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white me-3 text-decoration-none" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white text-decoration-none" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/+5599932824" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/+5599932824" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS opcional para carregar produtos dinamicamente se ainda for usar -->
     <script src="js2/main.js"></script>
 </body>
 </html>
